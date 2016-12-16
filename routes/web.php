@@ -18,11 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/api/v1/work/{id?}', 'Work@index');
-Route::post('/api/v1/work', 'Work@store');
-Route::post('/api/v1/work/{id}', 'Work@update');
-Route::delete('/api/v1/work/{id}', 'Work@destroy');
